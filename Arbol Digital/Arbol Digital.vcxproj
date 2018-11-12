@@ -115,6 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DigitalTree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="case.h" />
+    <ClInclude Include="dst.h" />
+    <ClInclude Include="node.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ArbolDigital.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
