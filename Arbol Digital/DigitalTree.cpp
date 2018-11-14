@@ -1,4 +1,4 @@
-/*TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTtTT*/
+/*ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo*/
 //Definimos los Aarchivos.h
 # include "dst.h"
 # include "node.h"
