@@ -16,7 +16,7 @@ int main() // menu principal iniciador
 		cout << "				" << endl;//
 		cout << "				" << endl;
 		//system("COLOR E9");
-		//cambiar el fondo de pantalla a color amarillo
+		//cambiar el fondo de pantalla a color amarillo//
 		cout << "***************************" << endl;
 		cout << "*ARBOL DE BUSQUEDA DIGITAL*" << endl;
 		cout << "***************************" << endl;
