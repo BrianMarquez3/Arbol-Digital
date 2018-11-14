@@ -1,18 +1,22 @@
+//Definimos los Aarchivos.h
 # include "dst.h"
 # include "node.h"
 # include "case.h"
 
-int main()
+int main() // menu principal iniciador 
 {
-	int choice, num;
-	DST dst;
-	node *temp;
-	while (1)
+	int choice, num; //definimos choise el cual lo utilizaremos para elegir el el menu 
+	DST dst; //
+	node *temp; // ingresa al dst.h y comprueba el null, se ingresa mediente el puntero *
+	while (1)// bucle de 7 opciones
 	{
-		
+		// a continuacion se empiesan a mostrar las opciones
+		//Menu principal
+		//Menu principal
 		cout << "				" << endl;//
 		cout << "				" << endl;
 		//system("COLOR E9");
+		//cambiar el fondo de pantalla a color amarillo
 		cout << "***************************" << endl;
 		cout << "*ARBOL DE BUSQUEDA DIGITAL*" << endl;
 		cout << "***************************" << endl;
@@ -25,24 +29,24 @@ int main()
 		cout << "6.Mostar" << endl;
 		cout << "7.Salir" << endl;
 		cout << "Elige una Opcion: <1-7> ";
-		cin >> choice;
-		switch (choice)
+		cin >> choice; //se espera el ingreso de un valor del 1 al 7
+		switch (choice) // seguin el valor elejido se ingresa a case
 		{
 		case 1:
-			temp = new node;
+			temp = new node; //creacion de variables para el nuevo numero
 			cout << "Ingrese un Elemento : ";
-			cin >> temp->info;
-			dst.insert(root, temp);
-			break;
+			cin >> temp->info; //
+			dst.insert(root, temp);// captura del numero , nos envia a la clase insertar. dst.h
+			break; // fin de las instruccines
 		case 2:
-			if (root == NULL)
+			if (root == NULL) //
 			{
 				cout << "El Arbol esta vacio, no se puede Eliminar Elementos" << endl;
 				continue;
 			}
 			cout << "Ingrese el Numero para ser Eliminado : ";
-			cin >> num;
-			dst.deletet(num);
+			cin >> num; //
+			dst.deletet(num); //
 			break;
 		case 3:
 			cout << "Inorder:" << endl;

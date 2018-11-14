@@ -19,7 +19,7 @@ public:
 	void inorder(node *);
 	void postorder(node *);
 	void display(node *, int);
-	DST()
+	DST()// cmprueba si la raiz es nula
 	{
 		root = NULL;
 	}
@@ -67,13 +67,13 @@ void DST::find(int item, node **par, node **loc)
 
 void DST::insert(node *tree, node *newnode)
 {
-	if (root == NULL)
+	if (root == NULL) // comprueba la raiz
 	{
-		root = new node;
+		root = new node; // la variable de nuevo nodo se inicializa, se almacena el valor ingresado
 		root->info = newnode->info;
 		root->left = NULL;
 		root->right = NULL;
-		cout << "Agregado al Nodo Raiz" << endl;
+		cout << "Agregado al Nodo Raiz" << endl; //muestra el mensaje 
 		return;
 	}
 	if (tree->info == newnode->info)
