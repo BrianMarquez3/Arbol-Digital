@@ -9,16 +9,14 @@ using namespace std;
 
 class DST // clases principales
 {
-public:
+public: // principales funcionalidades
 	void find(int, node **, node **);
 	void insert(node * tree, node * newnode); // creamos 2 punteros
 	void deletet(int);
 	void case_a(node *, node *);
 	void case_b(node *, node *);
 	void case_c(node *, node *);
-	//void preorder(node *);
-	//void inorder(node *);
-	//void postorder(node *);
+
 	void display(node *, int);
 	DST()// comprueba si la raiz es nula
 	{

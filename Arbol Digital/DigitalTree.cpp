@@ -23,9 +23,6 @@ int main() // menu principal iniciador
 		
 		cout << "1.Insertar Elemento " << endl;
 		cout << "2.Borrar Elemento " << endl;
-		//cout << "3.Inorder" << endl;
-		//cout << "4.Preorder" << endl;
-		//cout << "5.Postorder" << endl;
 		cout << "6.Mostar" << endl;
 		cout << "7.Salir" << endl;
 		cout << "Elige una Opcion: <1-7> ";
@@ -49,28 +46,12 @@ int main() // menu principal iniciador
 			dst.deletet(num); // nos envia a la clase para eliminar
 			break;
 
-		/*case 3:
-			cout << "Inorder:" << endl;
-			dst.inorder(root);
-			cout << endl;
-			break;
-		case 4:
-			cout << "Preorder:" << endl;
-			dst.preorder(root);
-			cout << endl;
-			break;
-		case 5:
-			cout << "Postorder:" << endl;
-			dst.postorder(root);
-			cout << endl;
-			break;*/
-
-		case 6: // mostar el arbol
+		case 3: // mostar el arbol
 			cout << "Mostrar Arbol:" << endl;
 			dst.display(root, 1); // no envia a la case Mostar
 			cout << endl;
 			break;
-		case 7: // orden de terminar el proceso
+		case 4: // orden de terminar el proceso
 			exit(1);
 		default: // ecepcion para elegir otra opcion
 			cout << "Elige Otra Opcion" << endl; // mensage
