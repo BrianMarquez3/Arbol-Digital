@@ -81,7 +81,7 @@ void DST::case_c(node *par, node *loc)
  * Pre Order Traversal
  */
 
-void DST::preorder(node *ptr)
+/*void DST::preorder(node *ptr)
 {
 	if (root == NULL)
 	{
@@ -94,11 +94,11 @@ void DST::preorder(node *ptr)
 		preorder(ptr->left);
 		preorder(ptr->right);
 	}
-}
+}*/
 /*
  * In Order Traversal
  */
-void DST::inorder(node *ptr)
+/*void DST::inorder(node *ptr)
 {
 	if (root == NULL)
 	{
@@ -112,11 +112,11 @@ void DST::inorder(node *ptr)
 		inorder(ptr->right);
 	}
 }
-
+*/
 /*
  * Postorder Traversal
  */
-void DST::postorder(node *ptr)
+/*void DST::postorder(node *ptr)
 {
 	if (root == NULL)
 	{
@@ -130,5 +130,5 @@ void DST::postorder(node *ptr)
 		cout << ptr->info << "  ";
 	}
 }
-
+*/
 #endif

@@ -1,23 +1,24 @@
 #ifndef DST_H
 #define DST_H
+// agregamos node.h
 #include <iostream>
 #include <cstdlib>
 #include "node.h"
 
 using namespace std;
 
-class DST
+class DST // clases principales
 {
 public:
 	void find(int, node **, node **);
-	void insert(node * tree, node * newnode);
+	void insert(node * tree, node * newnode); // creamos 2 punteros
 	void deletet(int);
 	void case_a(node *, node *);
 	void case_b(node *, node *);
 	void case_c(node *, node *);
-	void preorder(node *);
-	void inorder(node *);
-	void postorder(node *);
+	//void preorder(node *);
+	//void inorder(node *);
+	//void postorder(node *);
 	void display(node *, int);
 	DST()// comprueba si la raiz es nula
 	{
@@ -25,26 +26,27 @@ public:
 	}
 };
 
-
+/*metodo para encontrar el valor*/
+/*luego de encontrarlo sera envialo a delete para ser borrado*/
 void DST::find(int item, node **par, node **loc)
 {
 	node *ptr, *ptrsave;
-	if (root == NULL)
+	if (root == NULL) // si la raiz esta vacia
 	{
 		*loc = NULL;
 		*par = NULL;
-		return;
+		return; //retorno
 	}
-	if (item == root->info)
+	if (item == root->info) // si es igual a la raiz
 	{
-		*loc = root;
+		*loc = root; // root=5 y item =5
 		*par = NULL;
 		return;
 	}
-	if (item < root->info)
-		ptr = root->left;
+	if (item < root->info) // si es menor 
+		ptr = root->left; // es menor
 	else
-		ptr = root->right;
+		ptr = root->right; // se dirige hacia la derecha
 	ptrsave = root;
 	while (ptr != NULL)
 	{
@@ -64,7 +66,7 @@ void DST::find(int item, node **par, node **loc)
 	*par = ptrsave;
 }
 
-
+/***** primer caso del case. Insercion****/
 void DST::insert(node *tree, node *newnode) // clade insertar
 {
 	if (root == NULL) // comprueba la raiz es null, lo usamos en el primer ingreso de datos
@@ -84,9 +86,9 @@ void DST::insert(node *tree, node *newnode) // clade insertar
 	if (tree->info > newnode->info) // ingreso de nuevo dato , para ser comparado segun el numero
 		// si el numero es menor 
 	{
-		if (tree->left != NULL)
+		if (tree->left != NULL) //cuando el nodo no esta vacio, es utilizado en la segunda insercion
 		{
-			insert(tree->left, newnode); // hace la insercion
+			insert(tree->left, newnode); // ingreso al nodo, insetar
 		}
 		else
 		{
@@ -100,9 +102,9 @@ void DST::insert(node *tree, node *newnode) // clade insertar
 	else // el valor llegar ahi si es el mayor del arbol
 		//si el numero es mayor
 	{
-		if (tree->right != NULL)
+		if (tree->right != NULL) // cuando el nodo no esta vacio, es utilizado en la segunda insercion
 		{
-			insert(tree->right, newnode);
+			insert(tree->right, newnode);  // ingreso al nodo, insetar
 		}
 		else
 		{
@@ -119,13 +121,13 @@ void DST::insert(node *tree, node *newnode) // clade insertar
 void DST::deletet(int item)
 {
 	node *parent, *location;
-	if (root == NULL)
+	if (root == NULL) // compara si el arbol esta vacio
 	{
-		cout << "Arbol vacio" << endl;
-		return;
+		cout << "Arbol vacio" << endl; // muetra el mensage
+		return; // retorna al menu principal
 	}
 	find(item, &parent, &location);
-	if (location == NULL)
+	if (location == NULL) // no se encontro el numero
 	{
 		cout << "Elemento no Encontrado en el Arbol" << endl;
 		return;
@@ -144,22 +146,22 @@ void DST::deletet(int item)
 /*
  * Mostrar la Estructura del Arbol
  */
-void DST::display(node *ptr, int level)
+void DST::display(node *ptr, int level) // mostarmos el arbol
 {
-	int i;
-	if (ptr != NULL)
+	int i; // Creamos variable i
+	if (ptr != NULL) // si no esta vacio
 	{
-		display(ptr->right, level + 1);
-		cout << endl;
-		if (ptr == root)
-			cout << "Raiz->:  ";
+		display(ptr->right, level + 1); // em el primer recorrido retona  al If
+		cout << endl; // espacio
+		if (ptr == root) // compara si es igual la raiz
+			cout << "Raiz->:  "; //mostramos la raiz
 		else
 		{
 			for (i = 0; i < level; i++)
-				cout << "       ";
+				cout << "       "; // asignar espacio haco la derecha para crear la vista
 		}
-		cout << ptr->info;
-		display(ptr->left, level + 1);
+		cout << ptr->info; //muestra el mayor
+		display(ptr->left, level + 1); // ,muetra el Menor
 	}
 }
 
