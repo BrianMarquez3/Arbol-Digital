@@ -1,6 +1,8 @@
 #ifndef CASE_H
 #define CASE_H
 
+
+//operacion in roden, pre orden
 /*
  * Case A
  */

@@ -1,4 +1,3 @@
-/*ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo*/
 //Definimos los Aarchivos.h
 # include "dst.h"
 # include "node.h"
@@ -38,7 +37,7 @@ int main() // menu principal iniciador
 			cout << "Ingrese un Elemento : ";
 			cin >> temp->info; //
 			dst.insert(root, temp);// captura del numero , nos envia a la clase insertar. dst.h
-			break; // fin de las instruccines
+			break; // fin de las instruccines, no vuelve a enviar a menu principal
 		case 2:
 			if (root == NULL) //
 			{
